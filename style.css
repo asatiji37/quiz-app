@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181a21;
+}
+.container {
+   
+  position: relative;
+  width: 100%;
+ 
+  max-width: 1200px;
+  background: #181a21;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px 8px rgba(232, 223, 223, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.channel{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+label {
+  text-align: start;
+  display: block;
+  font-size: 18px;
+   width: 48%;
+  margin-bottom: 10px;
+  color: #bba0ea;
+}
+select {
+  width: 52%;
+  padding: 10px;
+  border: none;
+ 
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #1f2847;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.front-screen .btn {
+ 
+  width: 190px;
+  display: block;
+   margin: auto;
+   margin-top: 20px;
+   height: 40px;
+}
+.hide {
+  display: none;
+}
+.timer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.timer .timer-progress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 3px solid #3f4868;
+}
+.timer .timer-progress .timer-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(to right, #372e30, #632e97);
+  transition: 1s linear;
+}
+.timer .timer-progress .timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.question-page .num {
+  color: #a2aace;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.question-page .num .total {
+  color: #576081;
+  font-size: 18px;
+}
+.question-page .ques {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.ans .answer {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  border: 3px solid #3f4868;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.answer .checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #3f4868;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.answer .checkbox i {
+  color: #fff;
+  font-size: 10px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.answer:hover:not(.checked) .checkbox,
+.answer.selected .checkbox {
+  background-color: #0c80ef;
+  border-color: #0c80ef;
+}
+.answer.selected .checkbox i {
+  opacity: 1;
+}
+.answer.correct {
+    border-color: #0cef2a;
+}
+.answer.wrong {
+  border-color: #fc3939;
+}
+.question-page,
+.ans {
+  margin-bottom: 30px;
+}
+.btn {
+  width: 100%;
+  height: 40px;
+  background: #613c4e;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.btn:hover {
+  background: #d4f8ab;
+  color: #576081;
+}
+.btn:disabled {
+  background: #576081;
+  cursor: not-allowed;
+}
+.btn.next {
+  display: none;
+}
+
+.end-screen .score {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.score .score-text {
+  color: #a2afe9;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 120px;
+}
+.restart{
+  width: 200px;
+  display: block;
+   margin: auto;
+   height: 40px;
+   
+}
+
+@media (max-width: 468px) {
+  .container {
+    min-height: 100vh;
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
